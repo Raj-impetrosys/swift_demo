@@ -9,9 +9,16 @@ import SwiftUI
 
 @main
 struct swift_demoApp: App {
+    @StateObject var cart = Cart()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView{
+                Login().environmentObject(cart)
+//                ContentView()
+    //            ListView()
+    //            ApiView()
+//                BadgeSymbol()
+            }
         }
     }
 }
